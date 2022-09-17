@@ -14,7 +14,8 @@ public class AddressBookMain {
             AddressBookMain addressBookMain = new AddressBookMain();
             System.out.println("Enter 1 For Add Contact");
             System.out.println("Enter 2 For Edit Contact");
-            System.out.println("Enter 3 For Exit");
+            System.out.println("Enter 3 For Delete Contact");
+            System.out.println("Enter 4 For Exit");
             int input = sc.nextInt();
 
             switch (input) {
@@ -22,8 +23,10 @@ public class AddressBookMain {
                     addressBookMain.addContact();
                 case 2:
                     addressBookMain.editContact();
-                    break;
                 case 3:
+                    addressBookMain.deleteContact();
+                    break;
+                case 4:
                     System.exit(0);
                     break;
                 default:
@@ -50,8 +53,8 @@ public class AddressBookMain {
         person.setPhoneNumber(sc.nextLong());
         System.out.println("Enter Email");
         person.setEmail(sc.next());
-
-        System.out.println("Add Contact Successfully");
+        System.out.println();
+        System.out.println("Contact Add Successfully");
 
         System.out.println(person);
         System.out.println();
@@ -63,7 +66,7 @@ public class AddressBookMain {
         System.out.println("Enter First Name for Edit");
         String firstName = sc.next();
         if (firstName.equals(person.getFirstName())) {
-            System.out.println("Edit Details of Person");
+            System.out.println("Edit Details of Person " + firstName);
             System.out.println("Enter first name");
             person.setFirstName(sc.next());
             System.out.println("Enter last name");
@@ -80,11 +83,24 @@ public class AddressBookMain {
             person.setPhoneNumber(sc.nextLong());
             System.out.println("Enter Email");
             person.setEmail(sc.next());
-
+            System.out.println();
             System.out.println("Edit Contact Successfully");
 
             System.out.println(person);
+            System.out.println();
+        } else {
+            System.out.println("Contact Not Found");
+        }
+    }
 
+    public void deleteContact() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter First Name For Delete Contact");
+        String firstName = sc.next();
+        if (firstName.equals(person.getFirstName())) {
+            person = null;
+            System.out.println("Contact Delete Successfully");
+            System.out.println();
         } else {
             System.out.println("Contact Not Found");
         }
