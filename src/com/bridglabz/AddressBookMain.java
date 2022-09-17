@@ -53,6 +53,9 @@ public class AddressBookMain {
 
         System.out.println("Add Contact Successfully");
 
+        System.out.println(person);
+        System.out.println();
+
     }
 
     public void editContact() {
@@ -77,6 +80,8 @@ public class AddressBookMain {
             person.setPhoneNumber(sc.nextLong());
             System.out.println("Enter Email");
             person.setEmail(sc.next());
+
+            System.out.println("Edit Contact Successfully");
 
             System.out.println(person);
 
