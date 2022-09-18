@@ -84,21 +84,21 @@ public class Person {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-    Person(){
+
+    Person() {
 
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                '}';
+                "firstName= " + firstName + ',' + '\n' +
+                "lastName= " + lastName + ',' + '\n' +
+                "address= " + address + ',' + '\n' +
+                "city= " + city + ',' + '\n' +
+                "state= " + state + ',' + '\n' +
+                "zip= " + zip + ',' + '\n' +
+                "phoneNumber=" + phoneNumber + ',' +
+                " email=" + email + ' ' + '}';
     }
 }
