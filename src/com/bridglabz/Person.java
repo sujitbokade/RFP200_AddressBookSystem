@@ -99,6 +99,6 @@ public class Person {
                 "state= " + state + ',' + '\n' +
                 "zip= " + zip + ',' + '\n' +
                 "phoneNumber=" + phoneNumber + ',' +
-                " email=" + email + ' ' + '}';
+                " email=" + email + ' ' + '}' + '\n' + '\n';
     }
 }
