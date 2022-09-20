@@ -17,7 +17,8 @@ public class AddressBookMain {
             System.out.println("Enter 1 For Add Contact");
             System.out.println("Enter 2 For Edit Contact");
             System.out.println("Enter 3 For Delete Contact");
-            System.out.println("Enter 4 For Exit");
+            System.out.println("Enter 4 For Display Contacts");
+            System.out.println("Enter 5 For Exit");
             int input = sc.nextInt();
             String firstName;
 
@@ -36,6 +37,9 @@ public class AddressBookMain {
                     addressBookMain.deleteContact(firstName);
                     break;
                 case 4:
+                    addressBookMain.displayContacts();
+                    break;
+                case 5:
                     System.exit(0);
                     break;
                 default:
@@ -111,5 +115,9 @@ public class AddressBookMain {
                 break;
             }
         }
+    }
+
+    public void displayContacts() {
+        System.out.println(list);
     }
 }
