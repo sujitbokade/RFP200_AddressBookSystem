@@ -145,7 +145,6 @@ public class AddressBookMain {
     }
 
     void selectAddressBook() {
-        System.out.println(AddressBookList.keySet());
         System.out.println("enter name of address book");
         String addressBookName = sc.next();
 
