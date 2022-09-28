@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class AddressBookMain {
     Scanner sc = new Scanner(System.in);
-    static ArrayList<Person> currentAddressBook;
-    static HashMap<String, ArrayList> AddressBookList = new HashMap<>();
+     ArrayList<Person> currentAddressBook;
+     HashMap<String, ArrayList> AddressBookList = new HashMap<>();
     String currentAddressBookName;
 
     public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class AddressBookMain {
                     addressBookMain.deleteContact(firstName);
                     break;
                 case 4:
-                    addressBookMain.displayContacts(AddressBookMain.currentAddressBook);
+                    addressBookMain.displayContacts(addressBookMain.currentAddressBook);
                     break;
                 case 5:
                     addressBookMain.addNewAddressBook();
