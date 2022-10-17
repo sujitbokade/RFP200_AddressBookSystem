@@ -85,11 +85,16 @@ public class AddressBookMain {
         System.out.println("Enter Email");
         person.setEmail(sc.next());
 
-        System.out.println("Contact Add Successfully");
-        System.out.println();
-        System.out.println(person);
-        currentAddressBook.add(person);
-        System.out.println();
+        boolean isDuplicate = checkDuplicate(person);
+        if(isDuplicate){
+            System.out.println("Contact Name Already Exist...");
+        }else {
+            System.out.println("Contact Add Successfully");
+            System.out.println();
+            System.out.println(person);
+            currentAddressBook.add(person);
+            System.out.println();
+        }
 
     }
 
@@ -164,5 +169,9 @@ public class AddressBookMain {
             Person person = (Person) p;
             System.out.println(person);
         }
+    }
+
+    boolean checkDuplicate(Person newperson){
+        return currentAddressBook.stream().anyMatch(person -> person.getFirstName().equals(newperson.getFirstName()));
     }
 }
